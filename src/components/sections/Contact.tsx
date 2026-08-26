@@ -105,6 +105,7 @@ export default function Contact() {
                 method="POST"
                 noValidate
                 className="flex flex-col gap-6"
+                netlify
                 onSubmit={handleSubmit}
               >
                 <input type="hidden" name="form-name" value="contact" />
