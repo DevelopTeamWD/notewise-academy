@@ -1,0 +1,10 @@
+export { default as Hero } from "./Hero";
+export { default as About } from "./About";
+export { default as Programs } from "./Programs";
+export { default as Journey } from "./Journey";
+export { default as Team } from "./Team";
+export { default as Testimonial } from "./Testimonial";
+export { default as Pricing } from "./Pricing";
+export { default as FAQ } from "./FAQ";
+export { default as CTA } from "./CTA";
+export { default as Contact } from "./Contact";
