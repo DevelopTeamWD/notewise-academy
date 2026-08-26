@@ -23,14 +23,40 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     // Sync Lenis scroll with GSAP ScrollTrigger
     lenis.on("scroll", ScrollTrigger.update);
 
-    // Use GSAP ticker for Lenis RAF — ensures both run on the same frame
+    // Use GSAP ticker for Lenis RAF
     const tickerCallback = (time: number) => {
       lenis.raf(time * 1000);
     };
     gsap.ticker.add(tickerCallback);
     gsap.ticker.lagSmoothing(0);
 
+    // Handle anchor link clicks — scroll smoothly to target
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest("a[href^='#']") as HTMLAnchorElement | null;
+      if (!anchor) return;
+
+      const hash = anchor.getAttribute("href");
+      if (!hash || hash === "#") return;
+
+      e.preventDefault();
+
+      // Scroll to top
+      if (hash === "#top") {
+        lenis.scrollTo(0);
+        return;
+      }
+
+      const el = document.querySelector(hash);
+      if (!el) return;
+
+      lenis.scrollTo(el as HTMLElement, { offset: -72 });
+    };
+
+    document.addEventListener("click", handleAnchorClick);
+
     return () => {
+      document.removeEventListener("click", handleAnchorClick);
       gsap.ticker.remove(tickerCallback);
       lenis.destroy();
     };

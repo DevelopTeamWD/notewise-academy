@@ -58,7 +58,7 @@ export default function Footer() {
     <footer className="bg-[#18181b] px-5 lg:px-16 py-10">
       <div className="max-w-[1280px] mx-auto flex flex-col gap-10">
         {/* Main grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1.6fr_1.6fr] gap-10">
           {/* Brand column */}
           <div className="flex flex-col gap-4">
             <Logo variant="light" />
@@ -150,23 +150,27 @@ export default function Footer() {
               netlify-honeypot="bot-field"
               noValidate
               onSubmit={handleSubscribe}
-              className="flex flex-col gap-3"
             >
               <input type="hidden" name="form-name" value="subscribe" />
-              <input
-                type="text"
-                name="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="h-12 px-4 rounded-lg border border-[#d4d4d8] bg-[#18181b] text-base text-white placeholder:text-[#71717a] focus:outline-none focus:border-[#8c00ff] transition-colors w-full"
-              />
-              <button
-                type="submit"
-                className="h-12 w-full bg-[#8c00ff] text-white font-semibold rounded-lg hover:bg-[#7000cc] transition-colors text-base"
-              >
-                Subscribe
-              </button>
+              <div className="relative">
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="h-12 w-full pl-4 pr-12 rounded-lg border border-[#d4d4d8] bg-[#18181b] text-base text-white placeholder:text-[#71717a] focus:outline-none focus:border-[#8c00ff] transition-colors"
+                />
+                <button
+                  type="submit"
+                  aria-label="Subscribe"
+                  className="absolute right-1 top-1 bottom-1 px-3 rounded-md bg-[#8c00ff] hover:bg-[#7000cc] transition-colors flex items-center justify-center cursor-pointer"
+                >
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M3 10h14M12 5l5 5-5 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+              </div>
             </form>
           </div>
         </div>

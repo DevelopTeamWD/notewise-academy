@@ -90,13 +90,13 @@ export default function Journey() {
             </div>
 
             {/* Music notes decoration */}
-            <div className="relative w-full h-[132px]">
+            <div className="relative w-full">
               <Image
-                src="/images/journey/music-notes-decoration.png"
+                src="/images/journey/Group.png"
                 alt=""
                 width={905}
                 height={264}
-                className="object-contain object-left w-full h-auto"
+                className="object-contain max-w-none object-left h-auto relative z-1 hidden md:block"
               />
             </div>
 
@@ -119,15 +119,24 @@ export default function Journey() {
           </div>
 
           {/* Right side - girl with guitar */}
-          <div className="flex-1 relative hidden lg:block min-h-[835px]">
+          <div className="flex-1 lg:block min-h-[835px]">
+            
             {/* Purple wave background */}
-            <Image
+            <div className="relative">
+              <Image
               src="/svg/journey-wave.svg"
               alt=""
               width={677}
               height={661}
-              className="absolute top-[3px] right-[2%] w-[677px] h-[661px] opacity-100"
-            />
+              className="absolute top-[3px] right-[2%] w-[677px] h-[500px] md:h-[661px] opacity-100"
+              />
+               <Image
+                src="/images/journey/Group.png"
+                alt=""
+                width={905}
+                height={264}
+                className="object-contain absolute top-[100px] right-[2%] w-full object-left h-auto z-[1] block md:hidden"
+              />
             {/* Girl with guitar */}
             <Image
               ref={girlRef}
@@ -135,8 +144,9 @@ export default function Journey() {
               alt="Young woman playing guitar"
               width={594}
               height={835}
-              className="absolute top-[57px] right-0 w-[594px] h-[835px] object-contain will-change-transform"
+              className="absolute z-999 top-[57px] right-0 w-[594px] h-[835px] object-contain will-change-transform"
             />
+            </div>
           </div>
         </div>
       </div>
