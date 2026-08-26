@@ -146,8 +146,6 @@ export default function Footer() {
             <form
               name="subscribe"
               method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
               noValidate
               onSubmit={handleSubscribe}
             >
