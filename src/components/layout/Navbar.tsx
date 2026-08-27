@@ -26,7 +26,7 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-    <header className="w-full bg-white sticky top-0 z-9999999">
+    <header className="w-full bg-white sticky top-0 z-9999">
       <div className="max-w-[1280px] mx-auto px-5 lg:px-0 flex items-center justify-between h-[72px]">
         <Logo variant="dark" />
 
