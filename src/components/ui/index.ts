@@ -3,3 +3,4 @@ export { default as Logo } from "./Logo";
 export { default as SectionTitle } from "./SectionTitle";
 export { default as CounterAnimation } from "./CounterAnimation";
 export { default as AnimateOnScroll } from "./AnimateOnScroll";
+export { default as TiltCard } from "./TiltCard";

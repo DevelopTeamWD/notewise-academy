@@ -47,3 +47,25 @@ html.lenis body {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
+
+/* Slick slider custom dots */
+.slick-dots {
+  position: relative !important;
+  bottom: auto !important;
+}
+
+.slick-dots li {
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.slick-dots li.slick-active div {
+  background-color: #18181b !important;
+  width: 24px !important;
+  border-radius: 9999px !important;
+}
+
+.slick-dots li div {
+  transition: all 0.3s ease;
+}

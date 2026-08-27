@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AnimateOnScroll } from "@/components/ui";
+import { AnimateOnScroll, TiltCard } from "@/components/ui";
 
 const programs = [
   {
@@ -17,14 +17,14 @@ const programs = [
       "Classical foundation with modern repertoire options. Patient, structured teaching for young beginners and adult starters.",
   },
   {
-    image: "/images/programs/program-4.png",
+    image: "/images/programs/Music-Theory.png",
     tags: ["Ages 5 & up", "All Level"],
     title: "Music Theory",
     description:
       "Stand-alone or as a complement to instrument lessons. Essential for exam candidates and anyone who wants to understand music deeply.",
   },
   {
-    image: "/images/programs/program-5.png",
+    image: "/images/programs/guitar.png",
     tags: ["Ages 7 & up", "Beginner to Advanced"],
     title: "Guitar Lessons",
     description:
@@ -60,43 +60,45 @@ export default function Programs() {
               key={program.title}
               animation="fadeUp"
               delay={index * 0.1}
-              className="flex flex-col gap-6"
+              className="flex flex-col"
             >
-              {/* Image with purple circle background */}
-              <div className="relative w-full h-[270px] flex items-center justify-center">
-                {/* Purple circle */}
-                <div className="absolute w-[240px] h-[240px] rounded-full bg-[#e3c4ff]" />
-                {/* Program image */}
-                <Image
-                  src={program.image}
-                  alt={program.title}
-                  fill
-                  className="object-contain relative z-10"
-                />
-              </div>
+              <div className="flex flex-col gap-6">
+                {/* Image with purple circle background + 3D tilt */}
+                <TiltCard className="relative w-full h-[270px] flex items-center justify-center rounded-2xl">
+                  {/* Purple circle */}
+                  <div className="absolute w-[240px] h-[240px] rounded-full bg-[#e3c4ff]" />
+                  {/* Program image */}
+                  <Image
+                    src={program.image}
+                    alt={program.title}
+                    fill
+                    className="object-contain relative z-10"
+                  />
+                </TiltCard>
 
-              {/* Content */}
-              <div className="flex flex-col gap-4">
-                {/* Tags */}
-                <div className="flex flex-wrap gap-3">
-                  {program.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 text-sm font-medium leading-[1.5] rounded-full bg-[#f9f5ff] border border-[#e3c4ff] text-[#6d00c5]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                {/* Content */}
+                <div className="flex flex-col gap-4">
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-3">
+                    {program.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 text-sm font-medium leading-[1.5] rounded-full bg-[#f9f5ff] border border-[#e3c4ff] text-[#6d00c5]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-                {/* Text */}
-                <div className="flex flex-col gap-2">
-                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-2xl leading-[1.2] text-[#18181b]">
-                    {program.title}
-                  </h3>
-                  <p className="text-lg leading-[1.5] text-[#3f3f46]">
-                    {program.description}
-                  </p>
+                  {/* Text */}
+                  <div className="flex flex-col gap-2">
+                    <h3 className="font-[family-name:var(--font-heading)] font-bold text-2xl leading-[1.2] text-[#18181b]">
+                      {program.title}
+                    </h3>
+                    <p className="text-lg leading-[1.5] text-[#3f3f46]">
+                      {program.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </AnimateOnScroll>

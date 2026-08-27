@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AnimateOnScroll } from "@/components/ui";
+import { AnimateOnScroll, TiltCard } from "@/components/ui";
 
 const teamMembers = [
   { name: "Amélie Laurent", role: "Vocal Training", image: "/images/team/member-1.png" },
@@ -30,13 +30,15 @@ export default function Team() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12">
           {teamMembers.map((member, index) => (
             <AnimateOnScroll key={member.name} animation="scaleUp" delay={index * 0.08} className="flex flex-col items-center">
-              <Image
-                src={member.image}
-                alt={`${member.name} - ${member.role}`}
-                width={296}
-                height={379}
-                className="w-full h-auto object-contain"
-              />
+              <TiltCard intensity={10} className="rounded-2xl overflow-hidden">
+                <Image
+                  src={member.image}
+                  alt={`${member.name} - ${member.role}`}
+                  width={296}
+                  height={379}
+                  className="w-full h-auto object-contain"
+                />
+              </TiltCard>
             </AnimateOnScroll>
           ))}
         </div>

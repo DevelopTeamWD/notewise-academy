@@ -43,7 +43,7 @@ export default function Journey() {
   useGSAP(() => {
     // Subtle parallax on the girl image
     gsap.to(girlRef.current, {
-      y: -40,
+      y: 200,
       ease: "none",
       scrollTrigger: {
         trigger: sectionRef.current,
