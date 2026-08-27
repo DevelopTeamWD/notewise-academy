@@ -108,13 +108,13 @@ export default function Footer() {
               <div className="flex gap-1 items-start">
                 <Image src="/svg/location.svg" alt="" width={20} height={20} className="shrink-0 mt-0.5" />
                 <span className="text-base leading-[1.5] text-white">
-                  280–282 Trần Hưng Đạo, phường An Hải Nam, quận Sơn Trà, Đà Nẵng.
+                  280 - 282 Tran Hung Dao Street, An Hai Nam Ward, Son Tra District, Da Nang, Vietnam.
                 </span>
               </div>
               <div className="flex gap-1 items-center">
                 <Image src="/svg/phone.svg" alt="" width={20} height={20} className="shrink-0" />
                 <span className="text-base leading-[1.5] text-white">
-                  0935 463 423
+                  +84935 463 423
                 </span>
               </div>
               <div className="flex gap-1 items-start">

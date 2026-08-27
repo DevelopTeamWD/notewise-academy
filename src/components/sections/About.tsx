@@ -99,8 +99,8 @@ export default function About() {
                   <Image
                     src={feature.icon}
                     alt=""
-                    width={48}
-                    height={48}
+                    width={32}
+                    height={32}
                   />
                   <div className="flex flex-col gap-1">
                     <h3 className="font-[family-name:var(--font-heading)] font-bold text-2xl leading-[1.2] text-[#18181b]">

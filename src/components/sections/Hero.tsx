@@ -16,7 +16,7 @@ const stats = [
   { value: "40+", label: "Exam distinctions" },
 ];
 
-export default function Hero() {
+export default function Hero({ counterActive = false }: { counterActive?: boolean }) {
   const sectionRef = useRef<HTMLElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
@@ -42,7 +42,7 @@ export default function Hero() {
   return (
     <section ref={sectionRef} className="bg-white px-5 lg:px-20 py-20 overflow-hidden">
       <div className="max-w-[1280px] mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-5">
           {/* Left content */}
           <div ref={textRef} className="flex flex-col gap-8 min-w-0 lg:w-[46%]">
             <div className="flex flex-col gap-4">
@@ -87,6 +87,7 @@ export default function Hero() {
             <div key={stat.label} className="flex flex-col gap-2">
               <CounterAnimation
                 value={stat.value}
+                active={counterActive}
                 className="font-semibold text-[40px] leading-[1.2] text-[#fc6441] capitalize"
               />
               <span className="text-lg font-medium leading-[1.5] text-[#3f3f46]">

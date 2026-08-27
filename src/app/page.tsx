@@ -20,6 +20,7 @@ import LoadingScreen from "@/components/ui/LoadingScreen";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [heroReady, setHeroReady] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
@@ -31,6 +32,7 @@ export default function Home() {
       duration: 1,
       ease: "power2.out",
       clearProps: "all",
+      onComplete: () => setHeroReady(true),
     });
   }, { dependencies: [loading] });
 
@@ -43,7 +45,7 @@ export default function Home() {
       >
         <Navbar />
         <main className="flex-1">
-          <Hero />
+          <Hero counterActive={heroReady} />
           <About />
           <Programs />
           <Journey />

@@ -85,7 +85,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-white px-5 lg:px-20 py-16">
+    <section id="contact" className="bg-[#FAFAFA] px-5 lg:px-20 py-16">
       <div className="max-w-[1280px] mx-auto">
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Form side */}

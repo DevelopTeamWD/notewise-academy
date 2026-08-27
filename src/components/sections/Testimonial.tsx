@@ -88,6 +88,16 @@ export default function Testimonial() {
               {testimonials.map((testimonial) => (
                 <div key={testimonial.name}>
                   <div className="flex flex-col gap-6">
+                    {/* Attribution */}
+                    <div className="flex flex-col">
+                      <span className="text-lg font-medium text-[#18181b]">
+                        {testimonial.name}
+                      </span>
+                      <span className="text-base text-[#3f3f46]">
+                        {testimonial.role}
+                      </span>
+                    </div>
+                    
                     {/* Stars */}
                     <div className="flex">
                       <Image
@@ -103,15 +113,7 @@ export default function Testimonial() {
                       &ldquo;{testimonial.quote}&rdquo;
                     </blockquote>
 
-                    {/* Attribution */}
-                    <div className="flex flex-col">
-                      <span className="text-lg font-medium text-[#18181b]">
-                        {testimonial.name}
-                      </span>
-                      <span className="text-base text-[#3f3f46]">
-                        {testimonial.role}
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               ))}

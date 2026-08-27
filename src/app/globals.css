@@ -69,3 +69,40 @@ html.lenis body {
 .slick-dots li div {
   transition: all 0.3s ease;
 }
+
+/* Spin animation for CTA disc */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Bounce animation for music notes */
+@keyframes bounce-note {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-6px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}
+
+.animate-bounce-note {
+  animation: bounce-note 2s ease-in-out infinite;
+}
