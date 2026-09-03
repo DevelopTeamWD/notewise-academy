@@ -64,7 +64,7 @@ export default function Footer() {
             <Logo variant="light" />
             <p className="text-base leading-[1.5] text-white">
               Elevating musical education through precision, discipline, and
-              artistic excellence since 1998.
+              artistic excellence since 2015.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
