@@ -35,7 +35,7 @@ const programs = [
     tags: ["Ages 8 & up", "Beginner to Advanced"],
     title: "Vocal Training",
     description:
-      "Breath control, technique, pitch accuracy, and performance confidence. All genres welcome — pop, classical, musical theatre.",
+      "Breath control, technique, pitch accuracy, and performance confidence. All genres welcome - pop, classical, musical theatre.",
   },
 ];
 

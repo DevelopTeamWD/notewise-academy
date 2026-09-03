@@ -30,7 +30,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     gsap.ticker.add(tickerCallback);
     gsap.ticker.lagSmoothing(0);
 
-    // Handle anchor link clicks — scroll smoothly to target
+    // Handle anchor link clicks - scroll smoothly to target
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const anchor = target.closest("a[href^='#']") as HTMLAnchorElement | null;

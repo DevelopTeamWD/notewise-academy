@@ -11,7 +11,7 @@ const faqs = [
   {
     question: "What age is too young (or too old) to start?",
     answer:
-      "We accept students from age 5 for piano and violin, and age 7 for guitar. There is no upper age limit — many of our adult students started in their 40s, 50s, and beyond.",
+      "We accept students from age 5 for piano and violin, and age 7 for guitar. There is no upper age limit - many of our adult students started in their 40s, 50s, and beyond.",
   },
   {
     question: "How do online lessons work?",

@@ -82,11 +82,11 @@ export default function About() {
                 <p>
                   Notewise Academy has been nurturing musicians since 2015. We combine
                   proven music pedagogy with a personalised, encouraging teaching style that
-                  keeps students motivated at every level — from first-timers to exam candidates.
+                  keeps students motivated at every level - from first-timers to exam candidates.
                 </p>
                 <br />
                 <p>
-                  Every student gets a customised learning path — not a one-size-fits-all
+                  Every student gets a customised learning path - not a one-size-fits-all
                   curriculum. We believe music should feel joyful, achievable, and deeply personal.
                 </p>
               </div>

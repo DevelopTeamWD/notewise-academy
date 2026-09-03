@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     quote:
-      "The exam preparation was outstanding. My son achieved a distinction in his ABRSM Grade 5 violin — something we never thought possible a year ago.",
+      "The exam preparation was outstanding. My son achieved a distinction in his ABRSM Grade 5 violin - something we never thought possible a year ago.",
     name: "Maria Santos",
     role: "Parent of violin student",
   },
