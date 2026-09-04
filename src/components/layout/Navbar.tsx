@@ -7,7 +7,7 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "Program", href: "#programs" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Blog", href: "#blog" },
+  // { label: "Blog", href: "#blog" },
 ];
 
 export default function Navbar() {
